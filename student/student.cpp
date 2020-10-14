@@ -75,7 +75,7 @@ int student::operator>(const student &x) const
 	int namecmp = strcmp(name, x.name);
 
 	if( namecmp==0 )
-		return (value - x.value)>0;
+		return value>x.value;
 
 	return namecmp>0;
 }
