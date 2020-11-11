@@ -20,7 +20,7 @@ public:
 	list_node() = default;
 	list_node(const char *name, int value): student(name, value) { next = nullptr; }
 	list_node(const list_node &x): student(x) { next = nullptr; }
-	list_node(list_node &&x): student(x) { next = x.next; x.next = nullptr; }
+	list_node(list_node &&x): student(static_cast<student &&>(x)) { next = x.next; x.next = nullptr; }
 	~list_node() { next = nullptr; }
 	list_node &operator=(const list_node &x);
 	list_node &operator=(list_node &&x);
