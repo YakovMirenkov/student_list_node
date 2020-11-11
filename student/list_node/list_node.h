@@ -1,7 +1,6 @@
 #ifndef LIST_NODE_H
 #define LIST_NODE_H
 
-#include <cstdio>
 #include "../student.h"
 
 class list_node: public student
